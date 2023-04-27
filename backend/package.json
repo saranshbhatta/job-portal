@@ -2,9 +2,10 @@
   "name": "backend",
   "version": "1.0.0",
   "description": "job portal",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
-    "start": "nodemon app.js"
+    "start": "nodemon backend/app.js",
+    "server": "nodemon backend/app.js"
   },
   "author": "Saransh",
   "license": "ISC",
