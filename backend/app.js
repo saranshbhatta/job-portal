@@ -4,11 +4,11 @@ const mongoose = require("mongoose");
 const morgan = require("morgan");
 const bodyParser = require("body-parser");
 require("dotenv").config();
-var cors = require('cors');
+// var cors = require('cors');
 const cookieParser = require("cookie-parser")
 const errorHandler = require("../backend/middleware/error")
 const path = require('path');
-
+const helmet = require('helmet')
 //import routes
 const authRoutes = require('../backend/routes/authRoutes')
 const userRoutes = require('../backend/routes/userRoutes')
@@ -30,7 +30,8 @@ app.use(bodyParser.urlencoded({
     extended: true
 }));
 app.use(cookieParser());
-app.use(cors());
+app.use(helmet());
+// app.use(cors());
 
 
 //auth Routes
